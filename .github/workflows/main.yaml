@@ -1,12 +1,12 @@
-name: Auto-Assign Issues
+name: Assign New Issues
 
 on:
   issues:
-    types:
+    types: 
       - opened
 
 jobs:
-  auto-assign:
+  assign-issue:
     runs-on: ubuntu-latest
     steps:
       - name: Assign Issue
@@ -14,3 +14,4 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: ayden-g
+
